@@ -19,29 +19,36 @@
       text-align: center;
     }
     .header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 15px 0;
-      text-align: center;
+      font-size: 2.5rem;
       font-weight: 700;
-      font-size: 2rem;
-      letter-spacing: 2px;
-      background-color: #161b22;
+      text-align: center;
+      color: #58a6ff; /* fallback */
       background: url('https://envs.sh/tzy.jpg') no-repeat center center;
       background-size: cover;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      color: #58a6ff; /* fallback */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-      z-index: 1000;
+      padding: 20px 0;
       user-select: none;
     }
     h1 {
       font-size: 2em;
       margin-bottom: 10px;
-      margin-top: 80px;
+      margin-top: 20px;
+    }
+    .loader {
+      border: 6px solid #1f1f1f;
+      border-top: 6px solid #58a6ff;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      animation: spin 1s linear infinite;
+      margin: 25px 0;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
     }
     #countdown {
       font-size: 1.5em;
@@ -71,7 +78,7 @@
   <div class="header">𝐀𝐧𝐢𝐑𝐞𝐚𝐥 - Redirecting...</div>
   <h1>🔗 Your link is redirecting...</h1>
 
-  <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading..." style="width:60px; height:60px; margin: 25px 0;" />
+  <div class="loader"></div>
 
   <div id="countdown">Wait: 3</div>
   <a href="https://t.me/AniReal_Updates" target="_blank" class="join-btn">Join Our Telegram Channel</a>
