@@ -3,56 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="3;url=https://t.me/AniReal_Anime_Zone" />
-  <title>Redirecting to AniReal...</title>
+  <meta http-equiv="refresh" content="4;url=https://t.me/AniReal_Anime_Zone" />
+  <title>Redirecting...</title>
   <style>
     body {
-      background: #0f0f0f;
-      color: #fff;
+      background-color: #0d1117;
+      color: #c9d1d9;
       font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
       text-align: center;
-      padding: 100px 20px;
     }
+
     h1 {
-      font-size: 32px;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .loader {
+      border: 6px solid #1f1f1f;
+      border-top: 6px solid #58a6ff;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      animation: spin 1s linear infinite;
+      margin: 25px 0;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    #countdown {
+      font-size: 1.5em;
       margin-bottom: 20px;
+      color: #58a6ff;
     }
-    p {
-      font-size: 18px;
-      color: #ccc;
-    }
+
     a {
       display: inline-block;
-      margin-top: 25px;
-      padding: 10px 25px;
-      background: #0088cc;
-      color: white;
+      margin-top: 10px;
+      padding: 10px 20px;
+      color: #ffffff;
+      background-color: #238636;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 6px;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
+
     a:hover {
-      background: #006699;
-    }
-    .loader {
-      margin: 30px auto;
-      width: 50px;
-      height: 50px;
-      border: 5px solid #333;
-      border-top: 5px solid #00aced;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+      background-color: #2ea043;
     }
   </style>
 </head>
 <body>
-  <h1>🔁 Redirecting to AniReal Channel...</h1>
+  <h1>🔗 Your link is Redirecting...</h1>
   <div class="loader"></div>
-  <p>If you are not redirected automatically, click the button below.</p>
-  <a href="https://t.me/AniReal_Anime_Zone" target="_blank">🚀 Go to Telegram</a>
+  <div id="countdown">Wait: 3</div>
+  <a href="https://t.me/AniReal_Anime_Zone" target="_blank">🚀 Click here if not redirected</a>
+
+  <script>
+    let count = 3;
+    const countdown = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      count--;
+      countdown.textContent = `Wait: ${count}`;
+      if (count === 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
