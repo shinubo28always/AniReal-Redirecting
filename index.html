@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="refresh" content="4;url=https://t.me/AniReal_Anime_Zone" />
-  <title>Redirecting...</title>
+  <title>AniReal Redirect</title>
   <style>
     body {
       background-color: #0d1117;
@@ -19,9 +19,23 @@
       text-align: center;
     }
 
+    .header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 12px;
+      background-color: #161b22;
+      color: #58a6ff;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
     h1 {
       font-size: 2em;
       margin-bottom: 10px;
+      margin-top: 80px;
     }
 
     .loader {
@@ -46,28 +60,33 @@
       color: #58a6ff;
     }
 
-    a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      color: #ffffff;
+    .join-btn {
+      margin-top: 15px;
+      padding: 12px 25px;
       background-color: #238636;
-      text-decoration: none;
-      border-radius: 6px;
+      color: white;
       font-weight: bold;
-      transition: background 0.3s ease;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
     }
 
-    a:hover {
+    .join-btn:hover {
       background-color: #2ea043;
     }
   </style>
 </head>
 <body>
-  <h1>🔗 Your link is Redirecting...</h1>
+  <div class="header">[ AniReal - Redirect Page ]</div>
+
+  <h1>🔗 Your link is redirecting...</h1>
   <div class="loader"></div>
   <div id="countdown">Wait: 3</div>
-  <a href="https://t.me/AniReal_Anime_Zone" target="_blank">🚀 Click here if not redirected</a>
+
+  <a href="https://t.me/AniReal_Updates" target="_blank" class="join-btn">Join Our Telegram Channel</a>
 
   <script>
     let count = 3;
