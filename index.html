@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="4;url=https://t.me/AniReal_Anime_Zone" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="4;url=https://t.me/AniReal_File_Store_Bot?start=Z2V0LTMyODg5Njg3NjY4OTQ5MDY" />
   <title>AniReal Redirect</title>
   <style>
     body {
@@ -18,48 +18,33 @@
       margin: 0;
       text-align: center;
     }
-
     .header {
       position: absolute;
       top: 0;
       width: 100%;
-      padding: 12px;
+      padding: 12px 20px;
       background-color: #161b22;
       color: #58a6ff;
-      font-weight: bold;
-      font-size: 1rem;
+      font-weight: 600;
+      font-size: 1.1rem;
       letter-spacing: 1px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      background-image: url('https://envs.sh/tzy.jpg');
+      background-repeat: no-repeat;
+      background-position: 10px center;
+      background-size: 30px 30px;
+      padding-left: 50px;
     }
-
     h1 {
       font-size: 2em;
       margin-bottom: 10px;
       margin-top: 80px;
     }
-
-    .loader {
-      border: 6px solid #1f1f1f;
-      border-top: 6px solid #58a6ff;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      animation: spin 1s linear infinite;
-      margin: 25px 0;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
     #countdown {
       font-size: 1.5em;
       margin-bottom: 20px;
       color: #58a6ff;
     }
-
     .join-btn {
       margin-top: 15px;
       padding: 12px 25px;
@@ -72,26 +57,25 @@
       text-decoration: none;
       font-size: 1.1em;
       transition: background-color 0.3s ease;
+      display: inline-block;
     }
-
     .join-btn:hover {
       background-color: #2ea043;
     }
   </style>
 </head>
 <body>
-  <div class="header">[ AniReal - Redirect Page ]</div>
-
+  <div class="header">AniReal - Redirecting Page</div>
   <h1>🔗 Your link is redirecting...</h1>
-  <div class="loader"></div>
-  <div id="countdown">Wait: 3</div>
 
+  <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading..." style="width:60px; height:60px; margin: 25px 0;" />
+
+  <div id="countdown">Wait: 3</div>
   <a href="https://t.me/AniReal_Updates" target="_blank" class="join-btn">Join Our Telegram Channel</a>
 
   <script>
     let count = 3;
     const countdown = document.getElementById("countdown");
-
     const interval = setInterval(() => {
       count--;
       countdown.textContent = `Wait: ${count}`;
