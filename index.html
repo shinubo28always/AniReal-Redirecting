@@ -9,7 +9,7 @@
     body {
       background-color: #0d1117;
       color: #c9d1d9;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -19,21 +19,24 @@
       text-align: center;
     }
     .header {
-      position: absolute;
+      position: fixed;
       top: 0;
       width: 100%;
-      padding: 12px 20px;
+      padding: 15px 0;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 2px;
       background-color: #161b22;
-      color: #58a6ff;
-      font-weight: 600;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-      background-image: url('https://envs.sh/tzy.jpg');
-      background-repeat: no-repeat;
-      background-position: 10px center;
-      background-size: 30px 30px;
-      padding-left: 50px;
+      background: url('https://envs.sh/tzy.jpg') no-repeat center center;
+      background-size: cover;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #58a6ff; /* fallback */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      z-index: 1000;
+      user-select: none;
     }
     h1 {
       font-size: 2em;
@@ -65,7 +68,7 @@
   </style>
 </head>
 <body>
-  <div class="header">AniReal - Redirecting Page</div>
+  <div class="header">𝐀𝐧𝐢𝐑𝐞𝐚𝐥 - Redirecting...</div>
   <h1>🔗 Your link is redirecting...</h1>
 
   <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading..." style="width:60px; height:60px; margin: 25px 0;" />
