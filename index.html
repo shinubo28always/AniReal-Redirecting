@@ -29,21 +29,31 @@
       margin-bottom: 15px;
       color: #0f0;
     }
-    p {
-      font-size: 16px;
-      margin: 10px 0;
-      line-height: 1.4;
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #1a1a1a;
+      border: 4px solid #3a00ff;
+      margin: 20px auto 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .countdown {
+    .count {
       font-size: 36px;
       font-weight: bold;
-      margin: 20px 0;
-      color: #3a00ff;
+      color: #00aaff;
+    }
+    .subtext {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
     }
     .btn {
       display: inline-block;
       background: #28a745;
-      color: #fff;
+      color: white;
       padding: 12px 20px;
       border-radius: 5px;
       text-decoration: none;
@@ -58,27 +68,28 @@
 <body>
 
   <div class="card">
-    <h1>🎯 Link Ready!</h1>
-    <p>Your link is ready to open, getting you there shortly.</p>
+    <h1>🎯 Your Link is Ready!</h1>
 
-    <div class="countdown" id="cd">03</div>
-    <p>seconds left…</p>
+    <div class="circle">
+      <div class="count" id="count">03</div>
+    </div>
+    <div class="subtext">seconds left...</div>
 
     <a href="https://t.me/AniReal_Anime_Zone" class="btn" id="goBtn">Go to Telegram</a>
   </div>
 
   <script>
     let seconds = 3;
-    const cdElem = document.getElementById('cd');
-    const btn = document.getElementById('goBtn');
+    const counter = document.getElementById('count');
+    const goBtn = document.getElementById('goBtn');
 
-    const countdown = setInterval(() => {
+    const timer = setInterval(() => {
       seconds--;
-      cdElem.textContent = seconds < 10 ? '0' + seconds : seconds;
+      counter.textContent = seconds < 10 ? '0' + seconds : seconds;
 
       if (seconds <= 0) {
-        clearInterval(countdown);
-        btn.click();
+        clearInterval(timer);
+        goBtn.click();
       }
     }, 1000);
   </script>
