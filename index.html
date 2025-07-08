@@ -29,7 +29,6 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);  
     }  
   
-    /* ✅ GOL CIRCLE STYLE */  
     .circle-timer {  
       width: 80px;  
       height: 80px;  
@@ -54,26 +53,8 @@
       border-radius: 12px;  
       margin: 20px auto;  
       display: block;  
+      cursor: pointer;  
     }  
-  
-    .watch-btn {  
-    .watch-btn {
-  display: inline-block;
-  margin: 30px auto;
-  padding: 15px 30px;
-  font-size: 18px;
-  color: white;                      /* ✅ White Text */
-  background-color: #28a745;        /* ✅ Green Background */
-  border: none;                     /* ✅ No Border */
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-
-.watch-btn:hover {
-  background-color: #218838;        /* ✅ Darker Green on Hover */
-}
   </style>  
 </head>  
 <body>  
@@ -92,25 +73,21 @@
     <p><span class="link-icon">🔗</span> Please wait, your link is being generated...</p>  
   </div>  
   
-  <!-- 🔹 Dan Da Dan Poster -->  
-  <img   
-    src="https://envs.sh/tMM.jpg"   
-    alt="Dan Da Dan Poster"   
-    class="bottom-image"   
-  />  
-  
-  <!-- 🔹 Button (Manual link) -->  
-  <a   
-    href="https://t.me/+siNx9E8Y6UZkMjg1"   
-    class="watch-btn"   
-    target="_blank"  
-  >  
-    👆Click Here to Watch Dan Da Dan🎉  
+  <!-- 🔹 Clickable Dan Da Dan Poster -->  
+  <a href="https://t.me/+siNx9E8Y6UZkMjg1" target="_blank">  
+    <img   
+      src="https://envs.sh/tMM.jpg"   
+      alt="Dan Da Dan Poster"   
+      class="bottom-image"   
+    />  
   </a>  
+  
+  <!-- 🔹 Bold Text (No link) -->  
+  <p style="text-align:center;"><strong>👆Click Here to Watch Dan Da Dan🎉</strong></p>  
   
   <!-- 🔹 JavaScript for Countdown Redirect -->  
   <script>  
-    let countdown = 3;  // ✅ Changed to 3 sec  
+    let countdown = 3;  
     const timer = document.getElementById('timer');  
   
     const autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=Z2V0LTMyOTA5NzM2MjQ0MTgxNTg";  
