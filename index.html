@@ -79,6 +79,16 @@
   padding: 10px;  
 }
 
+    .poster-box {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
+    }
+    
   </style>  
 </head>  
 <body>    <!-- 🔹 Banner -->    <img src="https://envs.sh/tXT.jpg" alt="AniReal Banner" class="top-banner" />    <!-- 🔹 Countdown Section -->    <div class="countdown-box">  
@@ -87,9 +97,13 @@
     <p style="font-weight: bold; color: #555; font-size: 20px;">  
       🔗 Redirecting Your Link<span class="dot-animate"></span>  
     </p>  
-  </div>    <!-- 🔹 Poster Button (Clickable Image) -->    <a href="https://t.me/+H-jtiyZXqS00M2Vl" target="_blank">  
-    <img src="https://envs.sh/t-n.jpg" alt="Watch Now" class="button-image" />  
-  </a>    <!-- 🔹 Caption -->    <p class="caption">👆Click Image to Watch & Download The Shiunji Family Children🔥</p>    <!-- 🔹 JS Logic -->    <script>  
+  </div>    <!-- 🔹 Poster Button (Clickable Image) -->    <div class="poster-box">
+  <a href="https://t.me/+H-jtiyZXqS00M2Vl" target="_blank">
+    <img src="https://envs.sh/t-n.jpg" alt="Watch Now" class="button-image" />
+  </a>
+  <p class="caption">👆Click Image to Watch & Download The Shiunji Family Children🔥</p>
+  </div>
+  <!-- 🔹 JS Logic -->    <script>  
     function getQueryParam(param) {  
       const params = new URLSearchParams(window.location.search);  
       return params.get(param);  
