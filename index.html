@@ -1,95 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Link Is Ready!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AniReal - Redirecting...</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #f8f8f8;
       text-align: center;
+      color: #111;
     }
-    .card {
-      background: #111;
-      padding: 30px 20px;
-      border-radius: 8px;
+
+    .top-banner {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+
+    .countdown-box {
+      background: white;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 12px;
       width: 90%;
-      max-width: 380px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      color: #0f0;
-    }
-    .circle {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: #1a1a1a;
-      border: 4px solid #3a00ff;
-      margin: 20px auto 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .count {
-      font-size: 36px;
+
+    #timer {
+      font-size: 48px;
       font-weight: bold;
-      color: #00aaff;
+      margin: 15px 0;
     }
-    .subtext {
-      font-size: 14px;
-      color: #ccc;
-      margin-bottom: 20px;
+
+    .link-icon {
+      font-size: 20px;
     }
-    .btn {
+
+    .bottom-image {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .watch-btn {
       display: inline-block;
-      background: #28a745;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 5px;
+      margin: 30px auto;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #28a745;
+      background-color: #fff;
+      border: 3px solid #28a745;
       text-decoration: none;
-      font-size: 16px;
-      transition: background 0.25s;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s;
     }
-    .btn:hover {
-      background: #218838;
+
+    .watch-btn:hover {
+      background-color: #28a745;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>🎯 Your Link is Ready!</h1>
+  <!-- 🔹 Top Banner -->
+  <img 
+    src="https://i.imgur.com/NKQZ8kC.jpg" 
+    alt="Top Banner" 
+    class="top-banner" 
+  />
 
-    <div class="circle">
-      <div class="count" id="count">03</div>
-    </div>
-    <div class="subtext">seconds left...</div>
-
-    <a href="https://t.me/AniReal_Anime_Zone" class="btn" id="goBtn">Go to Telegram</a>
+  <!-- 🔹 Countdown -->
+  <div class="countdown-box">
+    <h2>YOUR LINK IS ALMOST READY.</h2>
+    <div id="timer">5</div>
+    <p><span class="link-icon">🔗</span> Please Wait Your Link Genreting..</p>
   </div>
 
+  <!-- 🔹 Dan Da Dan Poster -->
+  <img 
+    src="https://i.imgur.com/TSVzi1F.jpg" 
+    alt="Dan Da Dan Poster" 
+    class="bottom-image" 
+  />
+
+  <!-- 🔹 Button (Manual link - like trailer, YouTube etc) -->
+  <a 
+    href="https://youtube.com/dandadan-trailer"   <!-- 🔄 Your manual button link -->
+    class="watch-btn" 
+    target="_blank"
+  >
+    👇Click Here to Watch Dan Da Dan🎉
+  </a>
+
+  <!-- 🔹 JavaScript for Countdown Redirect -->
   <script>
-    let seconds = 3;
-    const counter = document.getElementById('count');
-    const goBtn = document.getElementById('goBtn');
+    let countdown = 5;  // ⏱ Countdown time
+    const timer = document.getElementById('timer');
 
-    const timer = setInterval(() => {
-      seconds--;
-      counter.textContent = seconds < 10 ? '0' + seconds : seconds;
+    const autoRedirectURL = "https://your-main-download-link.com";  // 🔄 Main auto-redirect link
 
-      if (seconds <= 0) {
-        clearInterval(timer);
-        goBtn.click();
+    const interval = setInterval(() => {
+      countdown--;
+      timer.textContent = countdown;
+      if (countdown <= 0) {
+        clearInterval(interval);
+        window.location.href = autoRedirectURL;
       }
     }, 1000);
   </script>
