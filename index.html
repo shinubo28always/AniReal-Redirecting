@@ -12,13 +12,14 @@
       text-align: center;
       color: #111;
     }
-   ..top-banner {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+
+    .top-banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
     .countdown-box {
       background: white;
       margin: 30px auto;
@@ -28,6 +29,7 @@
       max-width: 500px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     .circle-timer {
       width: 100px;
       height: 100px;
@@ -42,16 +44,7 @@
       font-weight: bold;
       margin: 20px auto;
     }
-    .bottom-image {
-  width: 100%;
-  max-width: 300px;             /* ✅ Fixed square-ish size */
-  aspect-ratio: 1 / 1;          /* ✅ Square shape */
-  object-fit: cover;            /* ✅ Maintain crop fit */
-  border-radius: 12px;
-  margin: 20px auto;
-  display: block;
-  cursor: pointer;
-}
+
     .dot-animate::after {
       content: '';
       display: inline-block;
@@ -59,20 +52,43 @@
       text-align: left;
       animation: dots 3s steps(3, end) infinite;
     }
+
     @keyframes dots {
       0%   { content: ''; }
       33%  { content: '.'; }
       66%  { content: '..'; }
       100% { content: '...'; }
     }
+
+    .button-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 20px auto;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .button-image:hover {
+      opacity: 0.9;
+    }
+
+    .caption {
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- 🔹 Top Banner -->
-  <img src="https://envs.sh/tXT.jpg" alt="Top Banner" class="top-banner" />
+  <!-- 🔹 Banner -->
+  <img src="https://envs.sh/tXT.jpg" alt="AniReal Banner" class="top-banner" />
 
-  <!-- 🔹 Countdown -->
+  <!-- 🔹 Countdown Section -->
   <div class="countdown-box">
     <h2>YOUR LINK IS ALMOST READY.</h2>
     <div id="timer" class="circle-timer">3</div>
@@ -81,17 +97,15 @@
     </p>
   </div>
 
-  <!-- 🔹 Clickable Poster -->
+  <!-- 🔹 Poster Button (Clickable Image) -->
   <a href="https://t.me/+H-jtiyZXqS00M2Vl" target="_blank">
-    <img src="https://envs.sh/t-n.jpg" alt="The Shiunji Family Children Poster" class="bottom-image" />
+    <img src="https://envs.sh/t-n.jpg" alt="Watch Now" class="button-image" />
   </a>
 
-  <!-- 🔹 Bold Description -->
-  <p style="text-align:center;">
-    <strong>👆Click Image to Watch & Download The Shiunji Family Children🔥</strong>
-  </p>
+  <!-- 🔹 Caption -->
+  <p class="caption">👆Click Image to Watch & Download The Shiunji Family Children🔥</p>
 
-  <!-- 🔹 JS -->
+  <!-- 🔹 JS Logic -->
   <script>
     function getQueryParam(param) {
       const params = new URLSearchParams(window.location.search);
@@ -100,24 +114,20 @@
 
     let countdown = 3;
     const timer = document.getElementById('timer');
-
     let startParam = getQueryParam('start');
     let urlParam = getQueryParam('url');
     let autoRedirectURL = "";
 
     if (urlParam) {
       try {
-        autoRedirectURL = decodeURIComponent(urlParam.trim());
-      } catch (e) {
-        autoRedirectURL = urlParam.trim();
-      }
-      autoRedirectURL = autoRedirectURL.replace(/\s+/g, '');
+        urlParam = decodeURIComponent(urlParam.trim());
+        autoRedirectURL = urlParam;
+      } catch (e) {}
     } else if (startParam) {
       try {
         startParam = decodeURIComponent(startParam.trim());
+        autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam);
       } catch (e) {}
-      startParam = startParam.replace(/\s+/g, '');
-      autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam);
     }
 
     const interval = setInterval(() => {
