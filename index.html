@@ -1,98 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="4;url=https://t.me/AniReal_File_Store_Bot?start=Z2V0LTMyODg5Njg3NjY4OTQ5MDY" />
-  <title>AniReal Redirect</title>
+  <meta charset="UTF-8">
+  <title>AniReal Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      background-color: #0d1117;
-      color: #c9d1d9;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
       margin: 0;
+      padding: 0;
+      background-color: #a020f0;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
+      color: white;
     }
-    .header {
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-      color: #58a6ff; /* fallback */
-      background: url('https://envs.sh/tzy.jpg') no-repeat center center;
-      background-size: cover;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      padding: 20px 0;
-      user-select: none;
+    .container {
+      background-color: #111;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+      padding-bottom: 20px;
     }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-      margin-top: 20px;
+    .top-text {
+      font-size: 28px;
+      color: #00ff88;
+      font-weight: bold;
+      padding: 15px;
+      background-color: white;
+      color: #2e8b57;
     }
-    .loader {
-      border: 6px solid #1f1f1f;
-      border-top: 6px solid #58a6ff;
+    .main-image {
+      width: 100%;
+    }
+    .redirect-text {
+      font-size: 20px;
+      color: #1e90ff;
+      margin: 15px 0 10px;
+    }
+    .loading-circle {
+      border: 6px solid #333;
+      border-top: 6px solid #1e90ff;
       border-radius: 50%;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
+      margin: 10px auto;
       animation: spin 1s linear infinite;
-      margin: 25px 0;
     }
     @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
     }
-    #countdown {
-      font-size: 1.5em;
-      margin-bottom: 20px;
-      color: #58a6ff;
+    .wait-text {
+      font-size: 22px;
+      margin-top: 10px;
     }
-    .join-btn {
-      margin-top: 15px;
-      padding: 12px 25px;
-      background-color: #238636;
+    .telegram-btn {
+      margin-top: 20px;
+    }
+    .telegram-btn a {
+      background-color: #28a745;
       color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      padding: 12px 24px;
       text-decoration: none;
-      font-size: 1.1em;
-      transition: background-color 0.3s ease;
-      display: inline-block;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
     }
-    .join-btn:hover {
-      background-color: #2ea043;
+    .countdown {
+      font-weight: bold;
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
-  <div class="header">𝐀𝐧𝐢𝐑𝐞𝐚𝐥 - Redirecting...</div>
-  <h1>🔗 Your link is redirecting...</h1>
 
-  <div class="loader"></div>
+  <div class="container">
+    <div class="top-text">AniReal - Redirecting...</div>
 
-  <div id="countdown">Wait: 3</div>
-  <a href="https://t.me/AniReal_Updates" target="_blank" class="join-btn">Join Our Telegram Channel</a>
+    <a href="https://t.me/AniReal_Anime_Zone" target="_blank">
+      <img src="https://envs.sh/tgv.jpg" alt="Redirecting Image" class="main-image">
+    </a>
+
+    <div class="redirect-text">🔗 Your Link is Redirecting...</div>
+    <div class="loading-circle"></div>
+
+    <div class="wait-text">
+      Wait: <span class="countdown">03</span> Seconds...
+    </div>
+
+    <div class="telegram-btn">
+      <a href="https://t.me/AniReal_Anime_Zone" target="_blank">Join Our Telegram Channel</a>
+    </div>
+  </div>
 
   <script>
-    let count = 3;
-    const countdown = document.getElementById("countdown");
+    let seconds = 3;
+    const countdown = document.querySelector('.countdown');
+    const redirectUrl = "https://t.me/AniReal_Anime_Zone";
+
     const interval = setInterval(() => {
-      count--;
-      countdown.textContent = `Wait: ${count}`;
-      if (count === 0) {
+      seconds--;
+      countdown.textContent = seconds < 10 ? '0' + seconds : seconds;
+      if (seconds <= 0) {
         clearInterval(interval);
+        window.location.href = redirectUrl;
       }
     }, 1000);
   </script>
+
 </body>
 </html>
