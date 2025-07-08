@@ -97,8 +97,8 @@
     let countdown = 3;
     const timer = document.getElementById('timer');
 
-    const startParam = getQueryParam('start');
-    const urlParam = getQueryParam('url');
+    let startParam = getQueryParam('start');
+    let urlParam = getQueryParam('url');
     let autoRedirectURL = "";
 
     if (urlParam) {
@@ -107,11 +107,13 @@
       } catch (e) {
         autoRedirectURL = urlParam.trim();
       }
+      autoRedirectURL = autoRedirectURL.replace(/\s+/g, '');
     } else if (startParam) {
       try {
-        const cleanStart = decodeURIComponent(startParam.trim().replace(/\s+/g, ""));
-        autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(cleanStart);
+        startParam = decodeURIComponent(startParam.trim());
       } catch (e) {}
+      startParam = startParam.replace(/\s+/g, '');
+      autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam);
     }
 
     const interval = setInterval(() => {
