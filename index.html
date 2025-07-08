@@ -14,10 +14,13 @@
     }
 
     .top-banner {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
+  display: block;
+  width: 100vw;          /* Full screen width */
+  max-width: 100%;       /* Prevent overflow */
+  height: auto;
+  object-fit: cover;     /* Maintain proper aspect ratio */
+  margin: 0;             /* Remove any side margin */
+  padding: 0;
     }
 
     .countdown-box {
@@ -86,8 +89,7 @@
 <body>
 
   <!-- 🔹 Banner -->
-  <img src="https://envs.sh/tXT.jpg" alt="AniReal Banner" class="top-banner" />
-
+<img src="https://envs.sh/tXT.jpg" alt="AniReal Banner" class="top-banner" />
   <!-- 🔹 Countdown Section -->
   <div class="countdown-box">
     <h2>YOUR LINK IS ALMOST READY.</h2>
