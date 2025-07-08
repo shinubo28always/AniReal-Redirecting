@@ -65,10 +65,10 @@
 </head>
 <body>
 
-  <!-- Top Banner -->
+  <!-- 🔹 Top Banner -->
   <img src="https://envs.sh/tXT.jpg" alt="Top Banner" class="top-banner" />
 
-  <!-- Countdown -->
+  <!-- 🔹 Countdown -->
   <div class="countdown-box">
     <h2>YOUR LINK IS ALMOST READY.</h2>
     <div id="timer" class="circle-timer">3</div>
@@ -77,17 +77,17 @@
     </p>
   </div>
 
-  <!-- Clickable Poster -->
+  <!-- 🔹 Clickable Poster -->
   <a href="https://t.me/+H-jtiyZXqS00M2Vl" target="_blank">
     <img src="https://envs.sh/t-n.jpg" alt="The Shiunji Family Children Poster" class="bottom-image" />
   </a>
 
-  <!-- Bold Description -->
+  <!-- 🔹 Bold Description -->
   <p style="text-align:center;">
     <strong>👆Click Image to Watch/Download The Shiunji Family Children🔥</strong>
   </p>
 
-  <!-- JS -->
+  <!-- 🔹 JavaScript -->
   <script>
     function getQueryParam(param) {
       const params = new URLSearchParams(window.location.search);
@@ -104,13 +104,16 @@
       try {
         startParam = decodeURIComponent(startParam);
       } catch (e) {}
-      startParam = startParam.replace(/^\s+/, '');
+
+      // ✅ Remove all kinds of space
+      startParam = startParam.replace(/\s+/g, '');
 
       if (startParam.startsWith("url-")) {
         let externalUrl = startParam.slice(4);
         try {
           externalUrl = decodeURIComponent(externalUrl);
-        } catch(e) {}
+        } catch (e) {}
+        externalUrl = externalUrl.replace(/\s+/g, '');
         autoRedirectURL = externalUrl;
       } else {
         autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam);
