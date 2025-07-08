@@ -88,49 +88,47 @@
   </p>
 
   <!-- 🔹 JavaScript -->
-  <script>
-    function getQueryParam(param) {
-      const params = new URLSearchParams(window.location.search);
-      return params.get(param);
-    }
+<script>
+  function getQueryParam(param) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(param);
+  }
 
-    let countdown = 3;
-    const timer = document.getElementById('timer');
+  let countdown = 3;
+  const timer = document.getElementById('timer');
 
-    let startParam = getQueryParam('start');
-    let autoRedirectURL = "";
+  let startParam = getQueryParam('start');
+  let autoRedirectURL = null;
 
-    if (startParam) {
+  if (startParam) {
+    try {
+      startParam = decodeURIComponent(startParam);
+    } catch (e) {}
+
+    startParam = startParam.replace(/\s+/g, '');
+
+    if (startParam.startsWith("url-")) {
+      let externalUrl = startParam.slice(4);
       try {
-        startParam = decodeURIComponent(startParam);
+        externalUrl = decodeURIComponent(externalUrl);
       } catch (e) {}
-
-      // ✅ Remove all kinds of space
-      startParam = startParam.replace(/\s+/g, '');
-
-      if (startParam.startsWith("url-")) {
-        let externalUrl = startParam.slice(4);
-        try {
-          externalUrl = decodeURIComponent(externalUrl);
-        } catch (e) {}
-        externalUrl = externalUrl.replace(/\s+/g, '');
+      externalUrl = externalUrl.replace(/\s+/g, '');
+      if (externalUrl.startsWith("http")) {
         autoRedirectURL = externalUrl;
-      } else {
-        autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam);
+      }
+    } else {
+      autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam);
+    }
+  }
+
+  const interval = setInterval(() => {
+    countdown--;
+    timer.textContent = countdown;
+    if (countdown <= 0) {
+      clearInterval(interval);
+      if (autoRedirectURL) {
+        window.location.href = autoRedirectURL;
       }
     }
-
-    const interval = setInterval(() => {
-      countdown--;
-      timer.textContent = countdown;
-      if (countdown <= 0) {
-        clearInterval(interval);
-        if (autoRedirectURL) {
-          window.location.href = autoRedirectURL;
-        }
-      }
-    }, 1000);
-  </script>
-
-</body>
-</html>
+  }, 1000);
+</script>
