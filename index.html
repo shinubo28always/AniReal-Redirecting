@@ -104,17 +104,31 @@
   
   <!-- 🔹 JavaScript for Countdown Redirect -->  
   <script>  
+    function getQueryParam(param) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
+
     let countdown = 3;  
     const timer = document.getElementById('timer');  
   
-    const autoRedirectURL = "";  
-  
+    // Get start param from URL
+    const startParam = getQueryParam('start');
+    let autoRedirectURL = "";
+
+    if (startParam) {
+      // Build the redirect URL using the start parameter
+      autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam);
+    }
+
     const interval = setInterval(() => {  
       countdown--;  
       timer.textContent = countdown;  
       if (countdown <= 0) {  
         clearInterval(interval);  
-        window.location.href = autoRedirectURL;  
+        if (autoRedirectURL) {
+          window.location.href = autoRedirectURL;
+        }
       }  
     }, 1000);  
   </script>  
