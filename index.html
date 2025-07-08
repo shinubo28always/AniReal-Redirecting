@@ -105,15 +105,14 @@
     let countdown = 3;  
     const timer = document.getElementById('timer');  
 
-    const startParam = getQueryParam('start');
+    let startParam = getQueryParam('start');
     let autoRedirectURL = "";
 
     if (startParam) {
+      startParam = decodeURIComponent(startParam).trim().replace(/^(\s|%20)+/, ""); // ✅ Remove leading space or %20
       if (startParam.startsWith("url-")) {
-        // Custom external URL redirect
         autoRedirectURL = decodeURIComponent(startParam.slice(4));
       } else {
-        // Telegram bot link redirect
         autoRedirectURL = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam);
       }
     }
