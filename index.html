@@ -55,6 +55,22 @@
       display: block;  
       cursor: pointer;  
     }  
+
+    /* ✅ Animated Dots */
+    .dot-animate::after {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      text-align: left;
+      animation: dots 1.5s steps(3, end) infinite;
+    }
+
+    @keyframes dots {
+      0%   { content: ''; }
+      33%  { content: '.'; }
+      66%  { content: '..'; }
+      100% { content: '...'; }
+    }
   </style>  
 </head>  
 <body>  
@@ -70,7 +86,11 @@
   <div class="countdown-box">  
     <h2>YOUR LINK IS ALMOST READY.</h2>  
     <div id="timer" class="circle-timer">3</div>  
-    <p><span class="link-icon">🔗</span> Please wait, your link is being generated...</p>  
+
+    <!-- ✅ Animated Redirect Text -->
+    <p style="font-weight: bold; color: #555;">
+      🔗 Redirecting<span class="dot-animate"></span>
+    </p>  
   </div>  
   
   <!-- 🔹 Clickable Dan Da Dan Poster -->  
