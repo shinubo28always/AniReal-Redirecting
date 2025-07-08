@@ -12,10 +12,11 @@
       text-align: center;
       color: #111;
     }
-    .top-banner {
-      width: 100%;
-      max-width: 100%;
-      display: block;
+   .top-banner {
+  width: 100%;
+  height: 150px;                /* ✅ Fixed height */
+  object-fit: cover;            /* ✅ Crop kore full width fit */
+  display: block;
     }
     .countdown-box {
       background: white;
@@ -41,13 +42,15 @@
       margin: 20px auto;
     }
     .bottom-image {
-      width: 90%;
-      max-width: 500px;
-      border-radius: 12px;
-      margin: 20px auto;
-      display: block;
-      cursor: pointer;
-    }
+  width: 100%;
+  max-width: 300px;             /* ✅ Fixed square-ish size */
+  aspect-ratio: 1 / 1;          /* ✅ Square shape */
+  object-fit: cover;            /* ✅ Maintain crop fit */
+  border-radius: 12px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+}
     .dot-animate::after {
       content: '';
       display: inline-block;
