@@ -1,4 +1,6 @@
-(https://envs.sh/tzy.jpg)
+<p align="center">
+  <img src="https://envs.sh/tzy.jpg">
+</p>
 
 
 # 🔗 AniReal - Smart Link Redirector
