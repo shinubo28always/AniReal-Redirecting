@@ -77,25 +77,38 @@
     }
 
     .caption {
-      font-weight: bold;
-      text-align: center;
-      font-size: 16px;
-      padding: 10px;
-    }
-
     .poster-box {
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 500px;
-      margin: 20px auto;
-      box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
-      border: 2px solid #000;
-    }
-  </style>
-</head>
-<body>
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
+  border: 2px solid #000;
+}
+
+.image-container {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 4px 10px;
+  margin: 0 auto;
+  border-radius: 6px;
+  width: fit-content;
+  max-width: 90%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 2;
+}
   <!-- 🔹 Banner -->
   <img src="https://envs.sh/tXT.jpg" alt="AniReal Banner" class="top-banner" />
 
@@ -110,10 +123,12 @@
 
   <!-- 🔹 Poster Box -->
   <div class="poster-box">
+  <div class="image-container">
+    <p class="caption">👆Click Image to Watch & Download The Shiunji Family Children🔥</p>
     <a href="https://t.me/+H-jtiyZXqS00M2Vl" target="_blank">
       <img src="https://envs.sh/t-n.jpg" alt="Watch Now" class="button-image" />
     </a>
-    <p class="caption">👆Click Image to Watch & Download The Shiunji Family Children🔥</p>
+  </div>
   </div>
 
   <!-- 🔹 JS Logic -->
