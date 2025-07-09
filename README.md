@@ -1,6 +1,6 @@
 # 🔗 AniReal - Smart Link Redirector
 
-This is a simple, clean, and stylish redirect landing page designed to handle Telegram bot links, YouTube videos, Instagram reels, TikTok shorts, or any public link.
+This is a simple, clean, and stylish redirect landing page designed to handle Telegram Public Channel links, YouTube videos/Channel, Instagram reels/Profile, TikTok shorts/Profile, or any public link.
 
 ---
 
