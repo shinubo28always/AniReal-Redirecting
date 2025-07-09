@@ -29,7 +29,8 @@ This is a simple, clean, and stylish redirect landing page designed to handle Te
 
 ## 📸 Preview
 
-![Preview Banner](https://envs.sh/tXT.jpg)
+![Preview Banner](https://envs.sh/tXT.jpg)](https://shinubo28always.github.io/AniReal-Redirecting/?url=https://t.me/AniReal_Anime_Zone)  
+_Click the image above to preview live demo_
 
 ---
 
