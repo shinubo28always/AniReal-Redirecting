@@ -5,7 +5,7 @@
 
 # ─「 sᴍᴀʀᴛ ʀᴇᴅɪʀᴇᴄᴛᴏʀ 」─
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=AUTO+REDIRECTING+!;Created+by+AniReal+Developers!;A+Advanced+Bot+With+Cool+Redirect+Your+Links!!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=AUTO+REDIRECTING+!;Created+by+AniReal+Developers!;A+Advanced+Bot;With+Cool+Redirect+Your+Links!!)
 </p>
 This is a simple, clean, and stylish redirect landing page designed to handle Telegram Public Channel links, YouTube videos/Channel, Instagram reels/Profile, TikTok shorts/Profile, or any public link.
 
