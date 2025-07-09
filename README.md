@@ -23,8 +23,8 @@ This is a simple, clean, and stylish redirect landing page designed to handle Te
   - YouTube
   - Instagram
   - TikTok
-  - Telegram Bot Links
-  - Google Drive / Any Public Link
+  - Telegram Public Links!
+  - Google Drive / Any Public Link 🔥
 
 ---
 
