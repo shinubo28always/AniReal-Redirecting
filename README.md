@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://svgshare.com/i/130g.svg" width="100%" alt="Wave Background"/>
+  <img src="[https://svgshare.com/i/130g.svg](https://svgshare.com/i/130h)" width="100%" alt="Wave Background"/>
 </p>
 
 <p align="center">
