@@ -43,12 +43,19 @@ Any Link Redirect to Use: [ https://shinubo28always.github.io/AniReal-Redirectin
 
 <details><summary><b>⚠️ Important Note for Telegram Private Channel Links:</b></summary>
 
-`If you're trying to redirect to a Telegram private channel (which usually has a + sign in the link), you must replace the + symbol with %2B when using it inside the redirect URL.`
+If you're trying to redirect to a Telegram private channel (which usually has a `+` sign in the link),  
+you must replace the `+` symbol with `%2B` when using it inside the redirect URL.
 
-✅ Example:
+#### ❌ Wrong Format:
+```
+https://t.me/+H-jtiyZXqS00M2Vl
+```
 
-### https://t.me/+H-jtiyZXqS00M2Vl    ❌ Won't redirect properly
-https://shinubo28always.github.io/AniReal-Redirecting/?url=https://t.me/%2BH-jtiyZXqS00M2Vl #### ✅ Correct usage
+#### ✅ Correct Usage:
+```
+https://shinubo28always.github.io/AniReal-Redirecting/?url=https://t.me/%2BH-jtiyZXqS00M2Vl
+```
+
 </details>
 
 > 🔁 Use %2B instead of + when adding private channel links to the redirect URL.
