@@ -47,8 +47,8 @@ Any Link Redirect to Use: [ https://shinubo28always.github.io/AniReal-Redirectin
 
 ✅ Example:
 
-https://t.me/+H-jtiyZXqS00M2Vl    ❌ Won't redirect properly
-https://shinubo28always.github.io/AniReal-Redirecting/?url=https://t.me/%2BH-jtiyZXqS00M2Vl    ✅ Correct usage
+### https://t.me/+H-jtiyZXqS00M2Vl    ❌ Won't redirect properly
+https://shinubo28always.github.io/AniReal-Redirecting/?url=https://t.me/%2BH-jtiyZXqS00M2Vl #### ✅ Correct usage
 </details>
 
 > 🔁 Use %2B instead of + when adding private channel links to the redirect URL.
