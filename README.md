@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="[https://svgshare.com/i/130g.svg](https://svgshare.com/i/130h)" width="100%" alt="Wave Background"/>
-</p>
+
 
 <p align="center">
   <a href="https://shinubo28always.github.io/AniReal-Redirecting/?url=https://t.me/AniReal_Anime_Zone" target="_blank">
@@ -42,4 +40,4 @@ _Click the image above to preview live demo_
 ## 🛠️ How to Use
 
 Any Link Redirect to Use: [ https://shinubo28always.github.io/AniReal-Redirecting/?url={your-public-link} ] 🔁 Just replace `{your-public-link}` with the actual link you want to redirect to.
-</p>
+
