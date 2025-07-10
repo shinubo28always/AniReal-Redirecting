@@ -21,22 +21,24 @@
       display: block;
     }
 
-    /* ✅ Glass Box with Gradient Animation */
     .glass-box {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 16px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: linear-gradient(270deg, #00c8ff, #92fe9d, #00c8ff, #92fe9d);
-      background-size: 800% 800%;
-      animation: gradientShift 15s ease infinite;
-      padding: 30px;
-      color: white;
-      max-width: 600px;
-      margin: 40px auto;
-    }
+  background: linear-gradient(270deg, #00c8ff, #92fe9d, #00c8ff, #92fe9d),
+              rgba(0, 0, 0, 0.3); /* Dark overlay */
+  background-blend-mode: multiply; /* Blend gradient with black overlay */
+  background-size: 800% 800%;
+  animation: gradientShift 15s ease infinite;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  padding: 30px;
+  color: white;
+  max-width: 600px;
+  margin: 40px auto;
+}
 
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
@@ -86,7 +88,7 @@
     .caption {
       font-weight: bold;
       font-size: 16px;
-      color: black;
+      color: white;
     }
 
     .button-image {
