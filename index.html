@@ -123,23 +123,29 @@
 
 
 <!-- 🔹 Script -->
-  <script>
-    function getQueryParam(param) {
-      const params = new URLSearchParams(window.location.search);
-      return params.get(param);
-    }
+ <script>
+  function getQueryParam(param) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(param);
+  }
 
-    let countdown = 3;
-    const timer = document.getElementById('timer');
-    let urlParam = getQueryParam('url');
-    let startParam = getQueryParam('start');
-    let redirectTo = "";
+  let countdown = 3;
+  let redirectTo = "";
 
-    if (urlParam) {
-      redirectTo = decodeURIComponent(urlParam.trim());
-    } else if (startParam) {
-      redirectTo = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam.trim());
-    }
+  let urlParam = getQueryParam('url');
+  let startParam = getQueryParam('start');
+
+  if (urlParam) {
+    redirectTo = decodeURIComponent(urlParam.trim());
+  } else if (startParam) {
+    redirectTo = "https://t.me/AniReal_File_Store_Bot?start=" + encodeURIComponent(startParam.trim());
+  }
+
+  // ✅ Countdown shuru hobe page fully load howar por
+  window.onload = function () {
+    const timer = document.getElementById('timer'); // ekhane nichi
+    timer.textContent = countdown;
+
     const interval = setInterval(() => {
       countdown--;
       timer.textContent = countdown;
@@ -148,7 +154,5 @@
         if (redirectTo) window.location.href = redirectTo;
       }
     }, 1000);
-  </script>
-
-</body>
-</html>
+  };
+</script>
