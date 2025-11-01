@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AniReal - Redirecting...</title>
+  <title>AniReal - Redirect Pro😎</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -38,7 +38,10 @@
   color: white;
   max-width: 600px;
   margin: 40px auto;
-}
+      /* ✅ Add these */
+  position: relative; /* needed for z-index */
+  z-index: 5000;     /* native navbar er upor thakbe */
+    }
 
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
@@ -117,32 +120,50 @@
   margin-bottom: 10px;
         }
 
-    /* 🔹 Popup Glass Background */
-.popup-overlay {
+    /* Ad iframe frame */
+#ad-box iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 12px;
+}
+
+    /* 🔹 Native Navbar Style */
+#container-75abdbb0d449811c569ac3f133e5bdf6 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 60px;  /* navbar height control */
+  z-index: 9999;     /* countdown box er niche thakbe */
+    }
+    
+
+/* Popup overlay (full screen blur) */
+#popup-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 10000; /* sobar upor */
   animation: fadeIn 0.3s ease;
 }
 
-/* 🔹 Popup Box */
+/* Popup box */
 .popup-box {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 16px;
   padding: 25px 30px;
   text-align: center;
   color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   max-width: 320px;
   width: 85%;
-  animation: popupZoom 0.4s ease;
-}
+    }
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -189,6 +210,12 @@
   <script type="text/javascript" src="//www.highperformanceformat.com/66b5ddfe69bf7f0496fa300c874519eb/invoke.js"></script>
 </div>
 
+  <script type='text/javascript' src='//pl27956206.effectivegatecpm.com/91/33/32/913332be291373159c4db35c3a49fb5d.js'></script>
+
+  <!-- 🔹 Native Navbar -->
+<script async="async" data-cfasync="false" src="//pl27955699.effectivegatecpm.com/75abdbb0d449811c569ac3f133e5bdf6/invoke.js"></script>
+<div id="container-75abdbb0d449811c569ac3f133e5bdf6"></div>
+
   <!-- 🔹 Popup Message -->
 <div id="popup-overlay" class="popup-overlay">
   <div class="popup-box">
@@ -219,30 +246,34 @@
   }
 
   // ✅ Countdown shuru hobe page fully load howar por
-  window.onload = function () {
-    const timer = document.getElementById('timer'); // ekhane nichi
+window.onload = function() {
+  const popup = document.getElementById("popup-overlay");
+  const timer = document.getElementById("timer");
+  let countdown = 7;
+
+  // Countdown update
+  timer.textContent = countdown;
+  const interval = setInterval(() => {
+    countdown--;
     timer.textContent = countdown;
+  if (countdown <= 0) {
+    clearInterval(interval);
+    if (redirectTo) {
+      window.location.href = redirectTo;
+    }
+  }
+}, 1000);
 
-    const interval = setInterval(() => {
-      countdown--;
-      timer.textContent = countdown;
-      if (countdown <= 0) {
-        clearInterval(interval);
-        if (redirectTo) window.location.href = redirectTo;
-      }
-    }, 1000);
+  // Popup hide after 4 sec automatically
+  setTimeout(() => {
+    popup.classList.add("hidden");
+  }, 4000);
 
-    // ✅ Popup system
-const popup = document.getElementById("popup-overlay");
-
-// Hide popup after 7 seconds automatically
-setTimeout(() => {
-  popup.classList.add("hidden");
-}, 4000);
-
-// Hide popup if user clicks anywhere
-document.addEventListener("click", () => {
-  popup.classList.add("hidden");
-});
-  };
+  // Popup hide on click anywhere
+  document.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+};
  </script>
+</body>
+</html>
